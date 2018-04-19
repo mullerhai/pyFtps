@@ -5,9 +5,13 @@ Ftps  data encryption transform package and  hive data to pandas dataframe
 ### first
 
 install python 3.5 or  3.6 +
+
 pip3 install pyhive 0.5.1  +
+
 python 3.* has  ftplib package
+
 pip3 install  numpy 1.14.0
+
 pip3 install pandas 0.22.0
 
 if you  use mac  and connect   your hive server separate by the  jumpserver ,maybe you need to install sshTunnel
@@ -16,6 +20,7 @@ if you  use mac  and connect   your hive server separate by the  jumpserver ,may
 ### HOW TO USE 
 
     JUST  SEE THE  EXAMPLE ,CREATE  CLIENT  INSTANCE, THEN  SET THE HOST  PORT  USER  PWD,
+    
  YOU NEED  LOGIN FRIST,THEN YOU  CAN DO UPLOAD FILE  AND  DOWNLOAD FILE,
  
  the hive  ,you also  need  connect hive server first ,then do  something
