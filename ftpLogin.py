@@ -32,19 +32,22 @@ class  client:
 
   #显示  目录下的 文件列表
   def ftplistDir(self,ftps,sever_path):
+    ftps.cwd("/")#首先切换得到根目录下，否则会出现问题
     ftps.cwd(sever_path)
     files = ftps.nlst()
     for f in files:
       print(f)
 
 # 下载服务器文件
-  def  ftpDownloadSeverFile(self,ftps,sever_file,sever_path,new_localfile,buffersize=1024):
+  def  ftpDownloadSeverFile(self,ftps,sever_path,sever_file,new_localfile,buffersize=1024):
+    ftps.cwd("/")
     ftps.cwd(sever_path)
-    with open(sever_file , 'wb')as download_file:
-      ftps.retrbinary('RETR %s' % new_localfile, download_file.write, buffersize)
+    with open(new_localfile , 'wb')as download_file:
+      ftps.retrbinary('RETR %s' %sever_file , download_file.write, buffersize)
 
 ##上传文件
   def  ftpUploadLocalFile(self,ftps,local_filepath,sever_path,new_severfile,buffersize=1024):
+    ftps.cwd("/")
     ftps.cwd(sever_path)
     with open(local_filepath,'rb') as  upload_file:
       ftps.storbinary('STOR ' + new_severfile, upload_file, buffersize)
@@ -53,10 +56,10 @@ class  client:
 ##测试使用 通过
 if __name__ == '__main__':
   host = 'ftps.baidu.com'
-  port = 221
-  user = 'zh****ng'
+  port = '21'
+  user = 'zh****eng'
   pwd = 'zz****mt.2'
-  ip = '117.24.135.150'
+  ip = '117.35.45.150'
 
   cli=client(host,user,pwd,port)
   fs= cli.login(2,True)
