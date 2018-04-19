@@ -15,4 +15,7 @@ if you  use mac  and connect   your hive server separate by the  jumpserver ,may
 
 ### HOW TO USE 
 
-    JUST  SEE THE  EXAMPLE ,CREATE  CLIENT  INSTANCE, THEN  SET THE HOST  PORT  USER  PWD,MOST YOU NEED  LOGIN FRIST,THEN YOU  CAN DO UPLOAD FILE  AND  DOWNLOAD FILE
+    JUST  SEE THE  EXAMPLE ,CREATE  CLIENT  INSTANCE, THEN  SET THE HOST  PORT  USER  PWD,
+ YOU NEED  LOGIN FRIST,THEN YOU  CAN DO UPLOAD FILE  AND  DOWNLOAD FILE,
+ 
+ the hive  ,you also  need  connect hive server first ,then do  something
